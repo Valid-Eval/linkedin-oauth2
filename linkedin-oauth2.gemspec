@@ -20,9 +20,10 @@ Gem::Specification.new do |gem|
   # To support native JSON. Same requirements as Rails.
   gem.required_ruby_version = '>= 1.9.3'
 
-  gem.add_dependency "oauth2",  "~> 1.0"
-  gem.add_dependency "hashie",  "~> 3.2"
-  gem.add_dependency "faraday", "~> 0.9"
+  gem.add_dependency "oauth2",  "~> 2.0"
+  gem.add_dependency "hashie",  "~> 5.0"
+  gem.add_dependency "faraday", "> 0.17"
+  gem.add_dependency "json", "~> 2.6"
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "rspec", "~> 3.0"
@@ -31,7 +32,7 @@ Gem::Specification.new do |gem|
   # Extra gems for GitHub flavored MarkDown in YARD
   gem.add_development_dependency "yard"
   gem.add_development_dependency "redcarpet"
-  gem.add_development_dependency "github-markdown"
+  # gem.add_development_dependency "github-markdown"
 
   # We use VCR to mock LinkedIn API calls
   gem.add_development_dependency "vcr"
