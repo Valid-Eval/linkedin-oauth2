@@ -128,7 +128,7 @@ module LinkedIn
 
     # Returns a unix time in miliseconds
     def parse_modified_since(since)
-      if since.is_a? ::Fixnum
+      if since.is_a? ::Integer
         if ::Time.at(since).year < 2050
           # Got passed in as seconds.
           since = since * 1000

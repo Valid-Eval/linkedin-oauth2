@@ -1,3 +1,5 @@
+require 'json'
+
 module LinkedIn
   # Communications APIs
   #
@@ -34,7 +36,7 @@ module LinkedIn
         }
       }
 
-      post(path, MultiJson.dump(message), "Content-Type" => "application/json")
+      post(path, JSON.generate(message), "Content-Type" => "application/json")
     end
   end
 end
